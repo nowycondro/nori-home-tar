@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,10 +40,14 @@
   <link rel="mask-icon" href="https://a0.muscache.com/airbnb/static/icons/airbnb-0611901eac33ccfa5e93d793a2e21f09.svg"
     color="#FF5A5F" />
 
-  <link rel="preload" as="image" href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/40710b34-fbc2-43ee-a19c-59f63ff56b84.jpeg?im_w=1440&im_format=avif">
-  <link rel="preload" as="image" href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/c3fc1886-99e7-4ac4-8bd2-4672a5536d49.jpeg?im_w=1440&im_format=avif">
-  <link rel="preload" as="image" href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/1728eeb4-72b9-4ce0-bdac-af0270293cf6.jpeg?im_w=1440&im_format=avif">
-  <link rel="preload" as="image" href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/2fc4f487-2483-4e6d-856a-782ca99dc3a5.jpeg?im_w=1440&im_format=avif">
+  <link rel="preload" as="image"
+    href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/40710b34-fbc2-43ee-a19c-59f63ff56b84.jpeg?im_w=1440&im_format=avif">
+  <link rel="preload" as="image"
+    href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/c3fc1886-99e7-4ac4-8bd2-4672a5536d49.jpeg?im_w=1440&im_format=avif">
+  <link rel="preload" as="image"
+    href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/1728eeb4-72b9-4ce0-bdac-af0270293cf6.jpeg?im_w=1440&im_format=avif">
+  <link rel="preload" as="image"
+    href="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/2fc4f487-2483-4e6d-856a-782ca99dc3a5.jpeg?im_w=1440&im_format=avif">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.4/swiper-bundle.min.js"></script>
@@ -94,13 +99,76 @@
       background-color: #E4474E;
       color: #E4474E;
     }
+
+    #background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translateX(-50%) translateY(-50%);
+      object-fit: cover;
+      background-size: cover;
+    }
+
+    /* Add these styles to your existing style section */
+    .contact-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #FF5A5F;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      font-size: 16px;
+    }
+
+    .contact-button:hover {
+      background-color: #FF7E82;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .contact-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-icon {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <video autoplay loop muted id="background-video">
+      <source src="https://websites.godaddy.com/categories/v4/videos/raw/video/uA41GmyyG8IMaxXdb" type="video/mp4">
+  </video>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/40710b34-fbc2-43ee-a19c-59f63ff56b84.jpeg?im_w=1440&im_format=avif')">
+      <div class="swiper-slide"
+        style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/40710b34-fbc2-43ee-a19c-59f63ff56b84.jpeg?im_w=1440&im_format=avif')">
         <div class="slide-content">
           <h2 class="text-4xl font-bold mb-4">Premium & Family Apartment</h2>
           <p class="text-xl mb-6">Modern city apartment with premium amenities in the center of Jakarta.</p>
@@ -111,7 +179,8 @@
           </a>
         </div>
       </div>
-      <div class="swiper-slide" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/c3fc1886-99e7-4ac4-8bd2-4672a5536d49.jpeg?im_w=1440&im_format=avif')">
+      <div class="swiper-slide"
+        style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/c3fc1886-99e7-4ac4-8bd2-4672a5536d49.jpeg?im_w=1440&im_format=avif')">
         <div class="slide-content">
           <h2 class="text-4xl font-bold mb-4">Sky Garden</h2>
           <p class="text-xl mb-6">Access to a tropical-themed sky garden and breathtaking skyline views.</p>
@@ -122,7 +191,8 @@
           </a>
         </div>
       </div>
-      <div class="swiper-slide" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/1728eeb4-72b9-4ce0-bdac-af0270293cf6.jpeg?im_w=1440&im_format=avif')">
+      <div class="swiper-slide"
+        style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/1728eeb4-72b9-4ce0-bdac-af0270293cf6.jpeg?im_w=1440&im_format=avif')">
         <div class="slide-content">
           <h2 class="text-4xl font-bold mb-4">2 bedrooms for 4 + 2</h2>
           <p class="text-xl mb-6">Modern two-bedroom apartment that comfortably accommodating 4 persons and 2 extra.</p>
@@ -133,7 +203,8 @@
           </a>
         </div>
       </div>
-      <div class="swiper-slide" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/2fc4f487-2483-4e6d-856a-782ca99dc3a5.jpeg?im_w=1440&im_format=avif')">
+      <div class="swiper-slide"
+        style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA2MTMyMDE0NTgzMDk4NTM4Nw%3D%3D/original/2fc4f487-2483-4e6d-856a-782ca99dc3a5.jpeg?im_w=1440&im_format=avif')">
         <div class="slide-content">
           <h2 class="text-4xl font-bold mb-4">Premium Equipped</h2>
           <p class="text-xl mb-6">Exclusive with premium home appliances, plus a curated selection of toys and books for
@@ -145,11 +216,27 @@
           </a>
         </div>
       </div>
+
+      <div class="swiper-slide">
+        <div class="airbnb-embed-frame" data-id="1061320145830985387" data-view="home" data-hide-price="true"
+          style="width: 450px; height: 300px; margin: auto;"><a
+            href="https://www.airbnb.com/rooms/1061320145830985387?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">View
+            On Airbnb</a><a
+            href="https://www.airbnb.com/rooms/1061320145830985387?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget"
+            rel="nofollow">Premium & Family Apartment ★ 4.98 · 2 bedrooms · 4 beds · 1 bath</a>
+          <script async="" src="https://www.airbnb.com/embeddable/airbnb_jssdk"></script>
+        </div>
+      </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
+
+  <button id="contact-btn" class="contact-button" onclick="window.location.href='https://forms.gle/JinqQckoYHGpHwu36'">
+    <span class="contact-icon">✉</span>
+    <span class="contact-text">Contact Me</span>
+  </button>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -180,7 +267,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJT6G6RLRP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-WJT6G6RLRP');
